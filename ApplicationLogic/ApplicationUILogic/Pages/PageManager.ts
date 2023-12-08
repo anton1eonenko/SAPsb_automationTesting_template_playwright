@@ -5,8 +5,8 @@ import { NavigationMenu } from "../Components/NavigationMenu";
 import { HeaderMenu } from "../Components/HeaderMenu/HeaderMenu";
 import { HomeModal } from "../Components/HeaderMenu/Modals/HomeModal";
 import { ProfileModal } from "../Components/HeaderMenu/Modals/ProfileModal";
-import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/ManageSubsctiptions";
-import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData";
+import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/ManageSubscriptions/ManageSubsctiptions";
+import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData/ManageBillingData";
 
 export class PageManager {
     page: Page;
