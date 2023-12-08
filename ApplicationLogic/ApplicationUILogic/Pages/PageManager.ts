@@ -5,6 +5,8 @@ import { NavigationMenu } from "../Components/NavigationMenu";
 import { HeaderMenu } from "../Components/HeaderMenu/HeaderMenu";
 import { HomeModal } from "../Components/HeaderMenu/Modals/HomeModal";
 import { ProfileModal } from "../Components/HeaderMenu/Modals/ProfileModal";
+import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/ManageSubsctiptions";
+import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData";
 
 export class PageManager {
     page: Page;
@@ -14,6 +16,8 @@ export class PageManager {
     headerMenu;
     homeModal; 
     profileModal;
+    manageSubscriptions;
+    manageBillingData;
 
 
     constructor(page){
@@ -24,5 +28,7 @@ export class PageManager {
         this.headerMenu = new HeaderMenu(page); 
         this.homeModal = new HomeModal(page);
         this.profileModal = new ProfileModal(page); 
+        this.manageSubscriptions = new ManageSubscriptions(page);
+        this.manageBillingData = new ManageBillingData(page);
     }
 }
