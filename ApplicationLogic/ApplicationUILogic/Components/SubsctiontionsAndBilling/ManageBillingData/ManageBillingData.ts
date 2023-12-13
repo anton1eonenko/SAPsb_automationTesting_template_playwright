@@ -1,3 +1,4 @@
+import { Locator } from "@playwright/test";
 import { BaseApplicationPage } from "../../../Pages/BaseApplicationPage";
 
 export class ManageBillingData extends BaseApplicationPage {
@@ -42,23 +43,23 @@ export class ManageBillingData extends BaseApplicationPage {
     }; 
 
     DropDowns = {
-        BillStatus: this.Containers.FilterBarContainer.locator('[aria-labelledby*="billStatusSelector"]'),    // enum is requred 
-        TransferStatus: this.Containers.FilterBarContainer.locator('[aria-labelledby*="transferStatusSelector"]'),  // enum is requred 
-        Markets: this.Containers.FilterBarContainer.locator('[aria-labelledby*="marketsSelector"]'),  // enum is requred 
-        Year: this.Containers.FilterBarContainer.locator('[aria-labelledby*="newYearSelector"]'),  // enum is requred 
-        BillingType: this.Containers.FilterBarContainer.locator('[aria-labelledby*="chargeOrCredit"]'),  // enum is requred 
-        DeletionState: this.Containers.FilterBarContainer.locator('[aria-labelledby*="deletableStateFilter"]') // enum is requred 
+        BillStatus: this.Containers.FilterBarContainer.locator('[aria-labelledby*="billStatusSelector"]'),    // enum is required 
+        TransferStatus: this.Containers.FilterBarContainer.locator('[aria-labelledby*="transferStatusSelector"]'),  // enum is required 
+        Markets: this.Containers.FilterBarContainer.locator('[aria-labelledby*="marketsSelector"]'),  // enum is required 
+        Year: this.Containers.FilterBarContainer.locator('[aria-labelledby*="newYearSelector"]'),  // enum is required 
+        BillingType: this.Containers.FilterBarContainer.locator('[aria-labelledby*="chargeOrCredit"]'),  // enum is required 
+        DeletionState: this.Containers.FilterBarContainer.locator('[aria-labelledby*="deletableStateFilter"]') // enum is required 
     }; 
 
-    async InputCustomerMarketYearMonthAndClickGo (customer: string, market: string, year: string, month: string) {
-        await this.InputFields.Customer.fill(customer); 
+    async InputAndPressEnter (inputField: Locator, value: string) {
+        await inputField.fill(value); 
         await this.page.keyboard.press('Enter');
-        await this.InputFields.Markets.fill(market); 
-        await this.page.keyboard.press('Enter');
-        await this.InputFields.Year.fill(year); 
-        await this.page.keyboard.press('Enter');
-        await this.InputFields.Month.fill(month); 
-        await this.page.keyboard.press('Enter'); 
-        await this.Buttons.Go.click(); 
-    }
+    };
+
+    async InputCustomerMarketYearMonthAndClickGo(customer: string, market: string, year: string, month: string) {
+        await this.InputAndPressEnter(this.InputFields.Customer, customer); 
+        await this.InputAndPressEnter(this.InputFields.Markets, market); 
+        await this.InputAndPressEnter(this.InputFields.Year, year); 
+        await this.InputAndPressEnter(this.InputFields.Month, month); 
+    };
 }

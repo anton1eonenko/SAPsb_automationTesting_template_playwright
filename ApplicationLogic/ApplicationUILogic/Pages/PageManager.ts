@@ -7,6 +7,7 @@ import { HomeModal } from "../Components/HeaderMenu/Modals/HomeModal";
 import { ProfileModal } from "../Components/HeaderMenu/Modals/ProfileModal";
 import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/ManageSubscriptions/ManageSubsctiptions";
 import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData/ManageBillingData";
+import { ManageFieldCatalog } from "../Components/Pricing/ManageFieldCatalog/ManageFieldCatalog";
 
 export class PageManager {
     page: Page;
@@ -18,6 +19,7 @@ export class PageManager {
     profileModal;
     manageSubscriptions;
     manageBillingData;
+    manageFieldCatalog
 
 
     constructor(page){
@@ -30,5 +32,6 @@ export class PageManager {
         this.profileModal = new ProfileModal(page); 
         this.manageSubscriptions = new ManageSubscriptions(page);
         this.manageBillingData = new ManageBillingData(page);
+        this.manageFieldCatalog = new ManageFieldCatalog(page);
     }
 }
