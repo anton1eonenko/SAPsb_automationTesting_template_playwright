@@ -8,6 +8,7 @@ import { ProfileModal } from "../Components/HeaderMenu/Modals/ProfileModal";
 import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/ManageSubscriptions/ManageSubsctiptions";
 import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData/ManageBillingData";
 import { ManageFieldCatalog } from "../Components/Pricing/ManageFieldCatalog/ManageFieldCatalog";
+import { ManageAllowanceTemplates } from "../Components/Pricing/ManageAllowanceTempates/ManageAllowanceTemplates";
 
 export class PageManager {
     page: Page;
@@ -19,7 +20,8 @@ export class PageManager {
     profileModal;
     manageSubscriptions;
     manageBillingData;
-    manageFieldCatalog
+    manageFieldCatalog; 
+    manageAllowanceTemplates
 
 
     constructor(page){
@@ -33,5 +35,6 @@ export class PageManager {
         this.manageSubscriptions = new ManageSubscriptions(page);
         this.manageBillingData = new ManageBillingData(page);
         this.manageFieldCatalog = new ManageFieldCatalog(page);
+        this.manageAllowanceTemplates = new ManageAllowanceTemplates(page);
     }
 }
