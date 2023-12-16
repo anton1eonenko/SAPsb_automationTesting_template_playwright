@@ -9,6 +9,9 @@ import { ManageSubscriptions } from "../Components/SubsctiontionsAndBilling/Mana
 import { ManageBillingData } from "../Components/SubsctiontionsAndBilling/ManageBillingData/ManageBillingData";
 import { ManageFieldCatalog } from "../Components/Pricing/ManageFieldCatalog/ManageFieldCatalog";
 import { ManageAllowanceTemplates } from "../Components/Pricing/ManageAllowanceTempates/ManageAllowanceTemplates";
+import { CustomerOverview } from "../Components/MasterDataAndConfiguration/CustomerOverview/CustomerOverview";
+import { ManageProducts } from "../Components/MasterDataAndConfiguration/ManageProducts/ManageProducts";
+
 
 export class PageManager {
     page: Page;
@@ -21,7 +24,9 @@ export class PageManager {
     manageSubscriptions;
     manageBillingData;
     manageFieldCatalog; 
-    manageAllowanceTemplates
+    manageAllowanceTemplates; 
+    customerOverview;
+    manageProducts;
 
 
     constructor(page){
@@ -36,5 +41,7 @@ export class PageManager {
         this.manageBillingData = new ManageBillingData(page);
         this.manageFieldCatalog = new ManageFieldCatalog(page);
         this.manageAllowanceTemplates = new ManageAllowanceTemplates(page);
+        this.customerOverview = new CustomerOverview(page);
+        this.manageProducts = new ManageProducts(page);
     }
 }
