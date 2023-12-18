@@ -11,6 +11,7 @@ import { ManageFieldCatalog } from "../Components/Pricing/ManageFieldCatalog/Man
 import { ManageAllowanceTemplates } from "../Components/Pricing/ManageAllowanceTempates/ManageAllowanceTemplates";
 import { CustomerOverview } from "../Components/MasterDataAndConfiguration/CustomerOverview/CustomerOverview";
 import { ManageProducts } from "../Components/MasterDataAndConfiguration/ManageProducts/ManageProducts";
+import { BusinessConfiguratorSideMenu } from "../Components/MasterDataAndConfiguration/ManageBusinessConfigurations/BusinessConfiguratorSideMenu";
 
 
 export class PageManager {
@@ -27,6 +28,7 @@ export class PageManager {
     manageAllowanceTemplates; 
     customerOverview;
     manageProducts;
+    businessConfiguratorSideMenu;
 
 
     constructor(page){
@@ -43,5 +45,6 @@ export class PageManager {
         this.manageAllowanceTemplates = new ManageAllowanceTemplates(page);
         this.customerOverview = new CustomerOverview(page);
         this.manageProducts = new ManageProducts(page);
+        this.businessConfiguratorSideMenu = new BusinessConfiguratorSideMenu(page);
     }
 }
