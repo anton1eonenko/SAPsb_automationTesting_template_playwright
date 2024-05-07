@@ -15,12 +15,12 @@ jobs:
     - name: Checkout main repo
       uses: actions/checkout@v2
       with: 
-        repository: https://github.com/anton1eonenko/SAPsb_automationTesting_template_playwright
+        repository: anton1eonenko/https://github.com/anton1eonenko/SAPsb_automationTesting_template_playwright
 
     - name: Checkout main repo
       uses: actions/checkout@v2
       with: 
-        repository: https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
+        repository: anto1eonenko/https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
 
     - uses: actions/setup-node@v3
       with:
@@ -28,7 +28,7 @@ jobs:
 
     - name: Install dependencies
       run: 
-        cd https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
+        cd anton1eonenko/https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
         npm ci
 
     - name: Install Playwright Browsers
@@ -36,7 +36,7 @@ jobs:
 
     - name: Run Playwright tests
       run:
-        cd https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
+        cd anton1eonenko/https://github.com/anton1eonenko/SAPcpq_automationTesting_template_playwright
         npx playwright test
 
 
